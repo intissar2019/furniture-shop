@@ -1,0 +1,182 @@
+
+    <!-- banner part start-->
+   
+
+    <section class="banner_part">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="banner_slider owl-carousel">
+                        <div class="single_banner_slider">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="banner_text">
+                                        <div class="banner_text_iner">
+                                            <h1>Une sélection formidable pour tous les styles</h1>
+                                            <p>Vous trouverez facilement nos meubles tendance, nos coups de cœur et nos collections inspirantes pour meubler toute la maison dans un style qui vous ressemble. Aménagez votre intérieur grâce à des meubles, des luminaires et des articles déco de grande qualité. Profitez de marques de renom, de prix imbattables et de nouveautés exclusives !</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="banner_img d-none d-lg-block col-lg-6 col-md-6">
+                                    <img src="<?= $wwwUrl ?>/img/banner_img.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single_banner_slider">
+                            <div class="row">
+                                <div class="col-lg-5 col-md-8">
+                                    <div class="banner_text">
+                                        <div class="banner_text_iner">
+                                            <h1>Le partenaire fiable pour se meubler en ligne</h1>
+                                            <p>Sur notre boutique de mobilier et de déco en ligne, faites vos achats en toute sécurité et à toute heure. En parcourant notre site d'ameublement, vous trouverez toutes les nouveautés ainsi que les nouvelles tendances. Vous pouvez nous faire confiance, la sécurité de notre site a été testée et certifiée par Trusted Shops.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="banner_img d-none d-lg-block col-lg-6 col-md-6">
+                                    <img src="<?= $wwwUrl ?>/img/banner2_img.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single_banner_slider">
+                            <div class="row">
+                                <div class="col-lg-5 col-md-8">
+                                    <div class="banner_text">
+                                        <div class="banner_text_iner">
+                                            <h1>La qualité au meilleur prix</h1>
+                                            <p>Nous vous proposons les meilleurs produits pour créer l’intérieur qui vous ressemble avec des éléments qui rentrent dans votre budget.</br> Avec nos nombreuses promos et soldes, vous profitez de meubles à prix réduits toute l’année chez nous. Choisissez vos produits coups de cœur et commandez vos meubles en ligne pour aménager votre intérieur à petits prix.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="banner_img d-none d-lg-block col-md-6 col-lg-6">
+                                    <img src="<?= $wwwUrl ?>/img/banner3_img.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                         <div class="single_banner_slider">
+                            <div class="row">
+                                <div class="col-lg-5 col-md-8">
+                                    <div class="banner_text">
+                                        <div class="banner_text_iner">
+                                            <h1>Livraison gratuite, satisfaction garantie
+                                            </h1>
+                                            <p>Avec MY HOME, pas besoin de vous soucier du temps de livraison, ni même du transport. Un grand nombre de nos produits sont prêts à être expédiés dès votre commande ou sous quelques jours. Nos luminaires, lits, meubles de jardin, fauteuils de relaxation et articles de déco sont livrés gratuitement et à l'adresse de votre choix.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="banner_img d-none d-lg-block col-lg-6 col-md-6">
+                                    <img src="<?= $wwwUrl ?>/img/banner4_img.png" alt="">
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="slider-counter"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- banner part start-->
+
+    <!-- feature_part start-->
+    <section class="feature_part padding_top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section_tittle text-center">
+                        <h2>MYHOME  - votre boutique de meubles et de déco</h2>
+                         <?php if($flashBag->hasMessages() == true): ?>
+                             <aside id="notice" class="notice">
+                                  <?php foreach($flashBag->fetchMessages() as $message): ?>
+                                     <h5><?= $message ?></h5>
+                                   <?php endforeach ?>
+                            </aside>
+                          <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-7 col-sm-6">
+                    <div class="single_feature_post_text">
+                        <p><?= $products[0]['title']; ?></p>
+                        <h3><?= $products[0]['Title']; ?></h3>
+                        <a href="<?= $requestUrl ?>/order?id=<?= $products[0]['Id']; ?>" class="feature_btn">COMMANDER <i class="fas fa-play"></i></a>
+                        <img src="<?= $wwwUrl ?><?= $products[0]['img']; ?>" alt="<?= $products[0]['title']; ?>">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-sm-6">
+                    <div class="single_feature_post_text">
+                        <p><?= $products[1]['title']; ?></p>
+                        <h3><?= $products[1]['Title']; ?></h3>
+                        <a href="<?= $requestUrl ?>/order?id=<?= $products[1]['Id']; ?>" class="feature_btn">COMMANDER<i class="fas fa-play"></i></a>
+                        <img src="<?= $wwwUrl ?><?= $products[1]['img']; ?>" alt="<?= $products[1]['title']; ?>">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-sm-6">
+                    <div class="single_feature_post_text">
+                        <p><?= $products[2]['title']; ?></p>
+                        <h3><?= $products[2]['Title']; ?></h3>
+                        <a href="<?= $requestUrl ?>/order?id=<?= $products[2]['Id']; ?>" class="feature_btn">COMMANDER <i class="fas fa-play"></i></a>
+                        <img src="<?= $wwwUrl ?><?= $products[2]['img']; ?>" alt="<?= $products[2]['title']; ?>">
+                    </div>
+                </div>
+                <div class="col-lg-7 col-sm-6">
+                    <div class="single_feature_post_text">
+                        <p><?= $products[3]['title']; ?></p>
+                        <h3><?= $products[3]['Title']; ?></h3>
+                        <a href="<?= $requestUrl ?>/order?id=<?= $products[3]['Id']; ?>" class="feature_btn">COMMANDER <i class="fas fa-play"></i></a>
+                        <img src="<?= $wwwUrl ?><?= $products[3]['img']; ?>" alt="<?= $products[3]['title']; ?>">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <section class="product_list best_seller">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="section_tittle text-center">
+                        <h2>Nos Categories</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-12">
+                    <div class="best_product_slider owl-carousel">
+                        <?php foreach($categories as $category): ?>
+                        <div class="single_product_item">
+                            <img src="<?= $wwwUrl ?><?= $category['img']; ?>" alt="">
+                            <div class="single_product_text">
+                                <h4><?= $category['title']; ?></h4>
+                                <a href="<?= $requestUrl ?>/products/productsByCategory?id=<?= $category['id']; ?>" class="feature_btn">Voir articles </a>
+                            </div>
+                        </div>
+                         <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+
+    <!-- subscribe_area part start-->
+    <section class="subscribe_area section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="subscribe_area_text text-center">
+                        <h5>REJOIGNEZ NOTRE NEWSLETTER</h5>
+                        <h2>Inscrivez-vous  et recevez un bon de réduction jusqu'au 20%</h2>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="entrer votre adresse email"
+                                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <a href="#" class="input-group-text btn_2" id="basic-addon2">Abonnez-vous maintenant</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--::subscribe_area part end::-->
+    <!--::footer_part start::-->
+  

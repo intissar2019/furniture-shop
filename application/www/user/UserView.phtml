@@ -1,0 +1,66 @@
+  <!--================Checkout Area =================-->
+  <section class="checkout_area padding_top">
+    <div class="container">
+      <div class="billing_details">
+        <div class="row">
+          <div class="col-lg-8">
+            <h3>Identité et coordonnées</h3>
+            <form class="row contact_form" action="<?= $requestUrl ?>/user" method="POST">
+              <div class="col-md-6 form-group p_star">
+                 <label >Votre nom</label>
+                <input type="text" class="form-control" id="lastName" data-required name="lastName" value="<?= $lastName ?>"/>
+               
+              </div>
+              <div class="col-md-6 form-group p_star">
+                 <label >Votre prénom</label>
+                <input type="text" class="form-control" id="firstName" data-required name="firstName" value="<?= $firstName ?>"/>
+              </div>
+              <div class="col-md-6 form-group p_star">
+                <label >Votre numéro de Tel</label>
+                <input type="text" class="form-control" id="phone"  maxlength="10" name="phone" data-name="Téléphone" data-type="number" value="<?= $phone ?>"/>
+              </div>
+              <div class="col-md-6 form-group p_star">
+                <label >Adresse Email</label>
+                <input type="text" class="form-control" id="email" data-required name="email" value="<?= $email ?>" />
+              </div>
+              <div class="col-md-12 form-group p_star">
+                <label >Tapez un mot de passe</label>
+                <input type="password" class="form-control" id="password"  name="password" data-required data-name="Mot de passe" data-length="8" />
+              </div>
+                <div class="col-md-12 form-group p_star">
+                   <label  >Votre adresse</label>
+                <textarea  class="form-control" id="address" name="address" rows="2"><?= $address ?></textarea>
+                
+              </div>
+              <div class="col-md-6 form-group p_star">
+                <label >Ville</label>
+                <input type="text" class="form-control" id="city" name="city" value="<?= $city ?>"/>
+                
+              </div>
+              <div class="col-md-6 form-group">
+                <label >Code postal</label>
+                <input type="text" class="form-control" id="zip" maxlength="5" name="zipCode" data-name="Code postal" data-type="number" value="<?= $zipCode ?>" />
+              </div>
+              <div class="col-md-12 form-group">
+                <input class="btn_3" type="submit" value="Créer le compte">
+               <span>Ou<a  href="<?= $requestUrl ?>">Annuler</a></span>       
+              </div>
+            </form>
+          </div>
+           <div class="col-lg-4">
+            <div class="order_box error-message ">
+              <h3><i class="fa fa-warning"></i> Il y a <span id="total-error-count">1</span> erreur(s) dans le formulaire !</h3>
+             <p><?= $errorMessage ?></p>
+            </div>
+
+              <img src="<?= $wwwUrl ?>/img/inscription.jpg." alt="inscri">
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================End Checkout Area =================-->
+
+ 

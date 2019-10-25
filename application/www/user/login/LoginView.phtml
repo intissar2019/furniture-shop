@@ -1,0 +1,46 @@
+
+
+
+    <!--================login_part Area =================-->
+    <section class="login_part padding_top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6">
+                    <div class="login_part_text text-center">
+                        <div class="login_part_text_iner">
+                            <h2>nouveau dans notre magasin</h2>
+                            <h5>Bienvenue !</h5>
+                            <a href="<?= $requestUrl ?>/user" class="btn_3">Créer votre compte</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="login_part_form">
+                        <div class="login_part_form_iner">
+                            <h3>Deja membre? <br>
+                                Veuillez vous connecter .</h3>
+                            <form class="row contact_form" action="<?= $requestUrl ?>/user/login" method="POST">
+                               
+                                <div class="col-md-12 form-group p_star">
+                                    <input type="text" class="form-control" id="email" name="email" value="<?= $email ?>" placeholder="Email" data-required>
+                                </div>
+                                <div class="col-md-12 form-group p_star">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe" data-required>
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <input class="button button-primary" type="submit" value="Connexion">
+                                     <a class="button button-cancel small" href="<?= $requestUrl ?>">Annuler</a>
+                                </div>
+                                 <div class="col-md-12 order_box">
+                                    <h4><i class="fa fa-warning"></i> Il y a <em class="total-error-count">1</em> erreur(s) dans le formulaire !</h4>
+                                    <p><?= $errorMessage ?></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================login_part end =================-->
+

@@ -1,0 +1,46 @@
+
+
+    <!--================ Products Area =================-->
+    <section class="cat_product_area section_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="left_sidebar_area">
+                        <aside class="left_widgets p_filter_widgets">
+                            <div class="l_w_title">
+                                <h3> Categories</h3>
+                            </div>
+                            <div class="widgets_inner">
+                                <ul class="list">
+                                    <?php foreach($categories as $category): ?>
+                                    <li>
+                                        <a href="<?= $requestUrl ?>/products/productsByCategory?id=<?= $category['id']; ?>"><?= $category['title']; ?></a>
+                                    </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row align-items-center latest_product_inner">
+                        <?php foreach($products as $product): ?>
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single_product_item">
+                                <img src="<?= $wwwUrl ?><?= $product['img']; ?>" alt="">
+                                <div class="single_product_text">
+                                    <h4><?= $product['Title']; ?></h4>
+                                    <h3>$<?= $product['Price']; ?></h3>
+                                    <a href="<?= $requestUrl ?>/order?id=<?= $product['Id']; ?>" class="feature_btn">COMMANDER <i class="fas fa-play"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End  Products Area =================-->
+
+   
