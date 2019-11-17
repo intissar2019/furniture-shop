@@ -84,11 +84,9 @@
                     <div class="section_tittle text-center">
                         <h2>MYHOME  - votre boutique de meubles et de déco</h2>
                          <?php if($flashBag->hasMessages() == true): ?>
-                             <aside id="notice" class="notice">
                                   <?php foreach($flashBag->fetchMessages() as $message): ?>
                                      <h5><?= $message ?></h5>
                                    <?php endforeach ?>
-                            </aside>
                           <?php endif; ?>
                     </div>
                 </div>
@@ -99,7 +97,7 @@
                         <p><?= $products[0]['title']; ?></p>
                         <h3><?= $products[0]['Title']; ?></h3>
                         <a href="<?= $requestUrl ?>/order?id=<?= $products[0]['Id']; ?>" class="feature_btn">COMMANDER <i class="fas fa-play"></i></a>
-                        <img src="<?= $wwwUrl ?><?= $products[0]['img']; ?>" alt="<?= $products[0]['title']; ?>">
+                        <img src="<?= $wwwUrl ?><?= $products[0]['img']; ?>" alt="<?= $products[0]['title']; ?>" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-5 col-sm-6">

@@ -8,6 +8,12 @@ var BasketSession = function()
     this.load();
 };
 
+BasketSession.prototype.get = function(){
+
+    var basket= localStorage.getItem('panier');
+    console.log(basket);
+
+}
 BasketSession.prototype.add = function(productId, name, quantity, salePrice)
 {
     var index;

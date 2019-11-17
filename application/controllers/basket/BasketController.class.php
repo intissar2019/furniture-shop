@@ -5,10 +5,7 @@ class BasketController
 {
 
 
-     public function httpGetMethod()
-    {
-       
-    }
+
 
     public function httpPostMethod(Http $http, array $formFields)
 	{

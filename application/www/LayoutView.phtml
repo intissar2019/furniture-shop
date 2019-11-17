@@ -32,6 +32,8 @@
 
 
     <script src="<?= $wwwUrl ?>/js/utilities.js"></script>
+    <script src="<?= $wwwUrl ?>/js/classes/FormValidator.class.js"></script>
+
 </head>
 
 <body>
@@ -72,13 +74,6 @@
                              <?php if($userSession->isAuthenticated() == true): ?>
                                 <p class="welcome">Bonjour <strong><?= $userSession->getFullName() ?></strong> !</p>
                             <a href="<?= $requestUrl ?>/user/logout"><i class="fas fa-sign-out-alt"></i></a>
-                            
-                            <div class="dropdown cart">
-                                <a class="dropdown-toggle" href="<?= $requestUrl ?>/basket" id="navbarDropdown3" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i  id="panel"  class="fas fa-cart-plus"></i>
-                                </a>
-                            </div>
                             <?php endif; ?>
                         </div>
                     </nav>
@@ -99,9 +94,8 @@
                     <div class="col-lg-8">
                         <div class="copyright_text">
                             <P><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> ous droits réservés| 
-Ce modèle est fait avec <i class="ti-heart" aria-hidden="true"></i> par <a href="" target="_blank">IntissarKlach</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></P>
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> Tous droits réservés | 
+                            Ce modèle est fait avec <i class="ti-heart" aria-hidden="true"></i> par <a href="" target="_blank">IntissarKlach 3WAcademy </a></P>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -138,6 +132,7 @@ Ce modèle est fait avec <i class="ti-heart" aria-hidden="true"></i> par <a href
     <!-- custom js -->
     <script src="<?= $wwwUrl ?>/js/custom.js"></script>
 
+ 
 </body>
 
 </html>

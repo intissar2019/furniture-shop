@@ -28,12 +28,11 @@
                                     <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe" data-required>
                                 </div>
                                 <div class="col-md-12 form-group">
-                                    <input class="button button-primary" type="submit" value="Connexion">
-                                     <a class="button button-cancel small" href="<?= $requestUrl ?>">Annuler</a>
+                                    <input class="button btn-success" type="submit" value="Connexion">
+                                     <a class="button btn-warning small" href="<?= $requestUrl ?>">Annuler</a>
                                 </div>
                                  <div class="col-md-12 order_box">
-                                    <h4><i class="fa fa-warning"></i> Il y a <em class="total-error-count">1</em> erreur(s) dans le formulaire !</h4>
-                                    <p><?= $errorMessage ?></p>
+                                    <p class="text-danger"> <?= $errorMessage ?></p>
                                 </div>
                             </form>
                         </div>

@@ -1,0 +1,63 @@
+<h2><i class="fa fa-fire"></i> Ajout d'un produit au catalogue</h2>
+
+<form class="generic-form" action="<?= $requestUrl ?>/admin/meal" method="POST" enctype="multipart/form-data">
+
+    <aside class="error-message hidden">
+        <h3><i class="fa fa-warning"></i> Il y a <span id="js-total-error-count">1</span> erreur(s) dans le formulaire !</h3>
+        <p></p>
+    </aside>
+
+    <fieldset>
+        <legend><i class="fa fa-check"></i> Caractéristiques</legend>
+        <ul>
+            <li>
+                <label for="name">Nom :</label>
+                <input id="name" type="text" name="name" data-required data-name="Nom">
+            </li>
+            <li>
+                <label class="textarea" for="description">Description :</label>
+                <textarea id="description" name="description" rows="3"></textarea>
+            </li>
+            <li>
+                <label for="photo">Photo :</label>
+                <input id="photo" name="photo" type="file">
+            </li>
+            <li>
+                <label for="color">Coleur :</label>
+                <input id="color" type="text" name="color" data-required data-name="color">
+            </li>
+            <li>
+                <label for="name">Nom :</label>
+                <input id="name" type="text" name="name" data-required data-name="Nom">
+            </li>
+            <li><i class="fa fa-warning"></i> Merci de renommer le fichier de la photo avec le nom de le produit <strong>avant</strong> de l'envoyer</li>
+        </ul>
+    </fieldset>
+
+    <fieldset>
+        <legend><i class="fa fa-retweet"></i> Approvisionnement</legend>
+        <ul>
+            <li>
+                <label for="initialStock">Stock initial :</label>
+                <input id="initialStock" class="quantity" type="text" maxlength="3" name="initialStock" data-name="Stock initial" data-type="positive-integer" data-required>
+            </li>
+            <li>
+                <label for="buyPrice">Prix d'achat :</label>
+                <input id="buyPrice" class="money" type="text" maxlength="5" name="buyPrice" data-name="Prix d'achat" data-required>
+                <label for="buyPrice" class="no-width">€</label>
+            </li>
+            <li>
+                <label for="salePrice">Prix de vente :</label>
+                <input id="salePrice" class="money" type="text" maxlength="5" name="salePrice" data-name="Prix de vente" data-required>
+                <label for="salePrice" class="no-width">€</label>
+            </li>
+        </ul>
+    </fieldset>
+
+    <ul>
+        <li>
+            <input class="button button-primary" type="submit" value="Ajouter">
+            <a class="button button-cancel small" href="<?= $requestUrl ?>">Annuler</a>
+        </li>
+    </ul>
+</form>
